@@ -1,6 +1,4 @@
 import ch.qos.logback.core.util.FileSize
-import ch.qos.logback.core.rolling.RollingFileAppender
-import ch.qos.logback.core.rolling.TimeBasedRollingPolicy
 import grails.util.BuildSettings
 import grails.util.Environment
 import org.springframework.boot.logging.logback.ColorConverter
@@ -38,16 +36,18 @@ appender("ROLLING", RollingFileAppender) {
 }
 
 def targetDir = BuildSettings.TARGET_DIR
-if (Environment.isDevelopmentMode() && targetDir != null) {
-    appender("FULL_STACKTRACE", FileAppender) {
-        file = "${targetDir}/stacktrace.log"
-        append = true
-        encoder(PatternLayoutEncoder) {
-            charset = StandardCharsets.UTF_8
-            pattern = "%level %logger - %msg%n"
+if (Environment.isDevelopmentMode()) { Environment.is
+    if(targetDir != null) {
+        appender("FULL_STACKTRACE", FileAppender) {
+            file = "${targetDir}/stacktrace.log"
+            append = true
+            encoder(PatternLayoutEncoder) {
+                charset = StandardCharsets.UTF_8
+                pattern = "%level %logger - %msg%n"
+            }
         }
+        logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
     }
-    logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
     logger("com.erratick.datawarehouse.query.QueryService", DEBUG)
     root(ERROR, ['STDOUT'])
 } else {
