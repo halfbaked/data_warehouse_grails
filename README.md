@@ -126,3 +126,11 @@ A user can have one of 3 roles
 - ANALYST - Can only read/analyse the data
 - COLLECTOR - The privileges of the ANALYST but can also load data into the system
 - ADMIN - The privileges of the COLLECTOR, and can also create and delete users.  
+
+### First User
+A first user will be created when the app starts. This values can be defined as system properties on 
+the command line or as environment variables. Appropriate environment variables are expected in production, 
+but not required for test and development.
+The properties are the following:
+- DATA_WAREHOUSE_USER
+- DATA_WAREHOUSE_PASSWORD

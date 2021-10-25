@@ -57,7 +57,9 @@ class QueryControllerSpec extends Specification {
     void init() {
         client  = HttpClient.create(new URL("http://localhost:$serverPort"))
         MeasuredMetric.withTransaction {
-            user = new User(username: RandomStringUtils.randomAlphabetic(20), password: RandomStringUtils.randomAlphanumeric(20)).tap {
+            user = new User(
+                    username: RandomStringUtils.randomAlphabetic(20),
+                    password: RandomStringUtils.randomAlphanumeric(20)).tap {
                 userSecurityRoleService.save(
                     userService.save(it.username, it.password),
                     securityRoleService.findByAuthority(SecurityRoles.ADMIN)

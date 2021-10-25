@@ -36,7 +36,7 @@ appender("ROLLING", RollingFileAppender) {
 }
 
 def targetDir = BuildSettings.TARGET_DIR
-if (Environment.isDevelopmentMode()) { Environment.is
+if (Environment.isDevelopmentMode()) {
     if(targetDir != null) {
         appender("FULL_STACKTRACE", FileAppender) {
             file = "${targetDir}/stacktrace.log"
