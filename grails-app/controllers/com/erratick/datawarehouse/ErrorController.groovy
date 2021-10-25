@@ -2,7 +2,6 @@ package com.erratick.datawarehouse
 
 import com.erratick.datawarehouse.load.LoadContentInvalidException
 import com.erratick.datawarehouse.load.transformer.TransformerNotFoundException
-import grails.converters.JSON
 import grails.validation.ValidationException
 import org.grails.web.errors.GrailsWrappedRuntimeException
 import org.springframework.http.HttpStatus

@@ -1,5 +1,16 @@
 # Data Warehouse
 
+## Technologies
+
+### Grails 4.0.12
+JVM web development framework using the Groovy language. Its development by convention approach makes
+developing quick (at least in the early stages) by keeping fidelity low. 
+Changes often only have to be made in one place making refactoring easier.
+
+### Databases
+The H2 in memory database again helps keep fidelity low in development and testing, but it is 
+replaced by MySql in production.
+
 ## Object Model
 
 ### Measurements

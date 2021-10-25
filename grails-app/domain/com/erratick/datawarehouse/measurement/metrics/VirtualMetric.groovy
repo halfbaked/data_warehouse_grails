@@ -1,7 +1,6 @@
 package com.erratick.datawarehouse.measurement.metrics
 
-
-import groovy.transform.CompileStatic
+import grails.compiler.GrailsCompileStatic
 import groovy.transform.ToString
 
 /**
@@ -10,7 +9,7 @@ import groovy.transform.ToString
  * calculated based on the measurements of the metrics clicks and impressions.
  */
 @ToString(includes="name", includePackage = false)
-@CompileStatic
+@GrailsCompileStatic
 class VirtualMetric extends Metric {
 
     static hasMany = [

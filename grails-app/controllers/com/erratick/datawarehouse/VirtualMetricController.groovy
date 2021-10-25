@@ -2,10 +2,12 @@ package com.erratick.datawarehouse
 
 import com.erratick.datawarehouse.measurement.VirtualMetricCreate
 import com.erratick.datawarehouse.measurement.metrics.VirtualMetric
+import grails.compiler.GrailsCompileStatic
 import grails.gorm.transactions.Transactional
 import grails.validation.ValidationException
 import org.springframework.http.HttpStatus
 
+@GrailsCompileStatic
 class VirtualMetricController {
 
     @Transactional

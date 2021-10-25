@@ -2,10 +2,12 @@ package com.erratick.datawarehouse
 
 import com.erratick.datawarehouse.load.LoadConfig
 import com.erratick.datawarehouse.load.LoadService
+import grails.compiler.GrailsCompileStatic
 import grails.gorm.transactions.Transactional
 import grails.validation.ValidationException
 import org.springframework.http.HttpStatus
 
+@GrailsCompileStatic
 class LoadController {
 
     LoadService loadService

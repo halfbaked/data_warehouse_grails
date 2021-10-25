@@ -1,9 +1,11 @@
 package com.erratick.datawarehouse
 
 import com.erratick.datawarehouse.measurement.metrics.MeasuredMetric
+import grails.compiler.GrailsCompileStatic
 import grails.gorm.transactions.Transactional
 import org.springframework.http.HttpStatus
 
+@GrailsCompileStatic
 class MeasuredMetricController {
 
     def index(){
