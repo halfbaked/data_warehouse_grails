@@ -1,0 +1,204 @@
+ERROR org.grails.core.cfg.GroovyConfigPropertySourceLoader - Unable to load application.groovy: startup failed:
+script16349164486671168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+script16349164486671168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:311)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:980)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:642)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:591)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:401)
+	at groovy.lang.GroovyClassLoader.access$300(GroovyClassLoader.java:89)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:341)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:338)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:147)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:336)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:320)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:262)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:272)
+	at groovy.lang.GroovyClassLoader$parseClass.call(Unknown Source)
+	at groovy.util.ConfigSlurper.parse(ConfigSlurper.groovy:174)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:73)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:47)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:544)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:499)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:475)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:445)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:424)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:323)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:204)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:188)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:178)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:99)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:485)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:472)
+	at com.erratick.datawarehouse.Application.main(Application.groovy:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application.groovy'
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:475)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:445)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:424)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:323)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:204)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:188)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:178)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:99)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:485)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:472)
+	at com.erratick.datawarehouse.Application.main(Application.groovy:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.grails.core.exceptions.GrailsConfigurationException: Error loading application.groovy due to [org.codehaus.groovy.control.MultipleCompilationErrorsException]: startup failed:
+script16349164486671168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:81)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:47)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:544)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:499)
+	... 29 common frames omitted
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+script16349164486671168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:311)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:980)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:642)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:591)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:401)
+	at groovy.lang.GroovyClassLoader.access$300(GroovyClassLoader.java:89)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:341)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:338)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:147)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:336)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:320)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:262)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:272)
+	at groovy.lang.GroovyClassLoader$parseClass.call(Unknown Source)
+	at groovy.util.ConfigSlurper.parse(ConfigSlurper.groovy:174)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:73)
+	... 32 common frames omitted
+ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application.groovy'
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:475)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:445)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:427)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:424)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:323)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:204)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:188)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:178)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:99)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:485)
+	at grails.boot.GrailsApp.run(GrailsApp.groovy:472)
+	at com.erratick.datawarehouse.Application.main(Application.groovy:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.grails.core.exceptions.GrailsConfigurationException: Error loading application.groovy due to [org.codehaus.groovy.control.MultipleCompilationErrorsException]: startup failed:
+script16349164611681168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:81)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:47)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:544)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:499)
+	... 29 common frames omitted
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+script16349164611681168255705.groovy: 1: unable to resolve class com.erratick.datawarehouse.auth.SecurityRoles
+ @ line 1, column 1.
+   import com.erratick.datawarehouse.auth.SecurityRoles
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:311)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:980)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:642)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:591)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:401)
+	at groovy.lang.GroovyClassLoader.access$300(GroovyClassLoader.java:89)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:341)
+	at groovy.lang.GroovyClassLoader$5.provide(GroovyClassLoader.java:338)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:147)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:336)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:320)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:262)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:272)
+	at groovy.lang.GroovyClassLoader$parseClass.call(Unknown Source)
+	at groovy.util.ConfigSlurper.parse(ConfigSlurper.groovy:174)
+	at org.grails.core.cfg.GroovyConfigPropertySourceLoader.load(GroovyConfigPropertySourceLoader.groovy:73)
+	... 32 common frames omitted
