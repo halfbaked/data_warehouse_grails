@@ -40,6 +40,7 @@ using the api, but measured metrics are also automatically created as part of th
 Allows measurements to be tagged with additional categories of data, that can then be grouped on.
 
 ## Queries
+The query logic is done as purely relational maths (a series of table joins).
 
 ### Example Queries
 - /query?metrics=Clicks&rangeStart=2019-11-14&rangeEnd=2019-11-16&groupBy=Datasource&filterBy=Datasource:Google Ads
@@ -93,7 +94,7 @@ The following content types are currently supported:
 - metrics - A comma delimited list of metrics
 - dimensions - A comma delimited list of dimensions
 - dateName - the attribute name for the date
-- dateFormat - the format the date is in
+- dateFormat - the format to expect the date in
 
 ### Example Requests
 ```
@@ -128,9 +129,9 @@ A user can have one of 3 roles
 - ADMIN - The privileges of the COLLECTOR, and can also create and delete users.  
 
 ### First User
-A first user will be created when the app starts. This values can be defined as system properties on 
-the command line or as environment variables. Appropriate environment variables are expected in production, 
-but not required for test and development.
+A first user will be created when the app starts. The values can be defined in the `application.yml` config, which in the case of 
+production expects them to be provided as environment variables.
+
 The properties are the following:
 - DATA_WAREHOUSE_USER
 - DATA_WAREHOUSE_PASSWORD
