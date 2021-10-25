@@ -133,6 +133,17 @@ Google Ads,Adventmarkt Touristik,11/15/19,131,81906
 Initial authentication is achieved by sending a POST request with a correct username and password to the `/login` URI.
 If successful, a JWT token is returned which is then used to make subsequent requests. 
 
+```POST /login```
+```json
+{
+  "username": "myusername",
+  "password": "mypassword"
+}
+```
+
+To authenticate requests, the access token returned should be placed in the `Authorization` header with the 
+word `Bearer` before it.
+
 ### Authorisation
 A user can have one of 3 roles
 - ANALYST - Can only read/analyse the data
