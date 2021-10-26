@@ -209,8 +209,6 @@ class QueryControllerSpec extends Specification {
         String accessToken = ClientHelper.login(client, user).accessToken
 
         and: 'send query for one metric'
-        println("Dimension name: ${dimensions[1].name.toString()}")
-        println("Dimensions $dimensions")
         HttpResponse<QueryResult> rsp = client.toBlocking().exchange(
             HttpRequest
                 .GET("${QUERY_URI}?metrics=${virtualMetric.name}&groupBy=${dimensions[1].name}")
